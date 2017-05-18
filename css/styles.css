@@ -1,11 +1,93 @@
-#aboutUs{
+/* General */
+body
+{
+	width: 100%;
+	background-color: rgb(168, 58, 64);
+}
+
+	/* Scrollbar style */
+	/* Source: https://css-tricks.com/examples/WebKitScrollbars/ */
+	::-webkit-scrollbar 
+	{
+		width: 12px;
+	}
+	
+	/* Track */
+	::-webkit-scrollbar-track 
+	{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+	}
+ 
+	/* Handle */
+	::-webkit-scrollbar-thumb 
+	{
+		-webkit-border-radius: 10px;
+		border-radius: 10px;
+		background: white;
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+	}
+	::-webkit-scrollbar-thumb:window-inactive 
+	{
+		background: gray; 
+	}
+	/* Scrollbar style */
+/* General */
+
+/* The nav bar */
+.navbar 
+{
+	position: fixed;
+	width: 100%;
+	top: 0%;
+}
+
+.nav li a
+{
+	-moz-transition: .5s;
+	-webkit-transition: .5s;
+	-ms-transition: .5s;
+	-o-transition: .5s;
+	transition: .5s;
+}
+/* The nav bar */
+
+/* The sections */
+#brand
+{
+	margin-top: 10%;
+	background-color: rgb(68, 57, 57);
+	padding: 5%;
+	padding-left:2%;
+	color: white;
+}
+
+#aboutUs
+{
+	margin-top: 50%;
+	background-color: rgb(68, 57, 57);
+	padding: 5%;
+	padding-left:2%;
+	color: white;
+}
+
+#location
+{
+	margin-top: 100%;
+	background-color: rgb(68, 57, 57);
+	padding: 5%;
+	padding-left:2%;
+	color: white;
+}
+
+#gallery
+{
 	margin-top: 200%;
 	background-color: rgb(68, 57, 57);
 	padding: 5%;
 	padding-left:2%;
 	color: white;
 }
-body{
-	width: 100%;
-	background-color: rgb(168, 58, 64);
-}
+
+/* The sections */
