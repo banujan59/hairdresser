@@ -3,6 +3,7 @@ body
 {
 	width: 100%;
 	background-color: rgb(168, 58, 64);
+	font-family: 'Raleway', sans-serif;
 }
 
 	/* Scrollbar style */
@@ -75,7 +76,7 @@ body
 #location
 {
 	margin-top: 100%;
-	background-color: rgb(68, 57, 57);
+	background-color: #587498;
 	padding: 5%;
 	padding-left:2%;
 	color: white;
@@ -84,10 +85,10 @@ body
 #gallery
 {
 	margin-top: 200%;
-	background-color: rgb(68, 57, 57);
+	background-color: #FFD800;
 	padding: 5%;
 	padding-left:2%;
-	color: white;
+	color: black;
 }
 
 /* The sections */
