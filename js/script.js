@@ -1,6 +1,9 @@
 /* Global variables */
 	// The following are used for the nav bar creation
 	var brandOffset, aboutUSOffset, locationOffset, galleryOffset;
+	
+	// The following represents the Google Maps on the page
+	var map;
 /* Global variables */
 
 
@@ -24,6 +27,17 @@ function initGlobalVars()
 	aboutUSOffset = Math.floor($("#aboutUs").offset().top) - 50;
 	locationOffset = Math.floor($("#location").offset().top) - 50;
 	galleryOffset = Math.floor($("#gallery").offset().top) - 50;
+}
+
+function myMap() 
+{				
+	var mapProp = 
+	{
+		center:new google.maps.LatLng(45.5017,-73.5673),
+		zoom:10,
+	};
+	
+	map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
 }
 
 /**
