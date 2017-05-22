@@ -10,17 +10,17 @@
 $(function() // to be executed when DOM finished loading
 {	
 	// initialize global vars
-	initGlobalVars();
-	$(window).resize(initGlobalVars);
+	initNavGlobalVars();
+	$(window).resize(initNavGlobalVars);
 	
 	// implement the nav slider
 	navSlider();
 });
 
 /**
-	* This function will initialize the global variables
+	* This function will initialize the global variables of the nav bar
 */
-function initGlobalVars()
+function initNavGlobalVars()
 {
 	// initialize global vars
 	brandOffset = Math.floor($("#brand").offset().top) - 50;
@@ -29,7 +29,10 @@ function initGlobalVars()
 	galleryOffset = Math.floor($("#gallery").offset().top) - 50;
 }
 
-function myMap() 
+/**
+	This function is called to initialize the map on the home page
+*/
+function initMap() 
 {				
 	var mapProp = 
 	{

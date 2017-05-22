@@ -54,7 +54,7 @@ body
 }
 /* The nav bar */
 
-/* The sections */
+/* The sections (General CSS) */
 #brand
 {
 	margin-top: 10%;
@@ -91,4 +91,11 @@ body
 	color: black;
 }
 
-/* The sections */
+/* The sections (General CSS) */
+
+/* The sections (Specific CSS) */
+#location legend
+{
+	color: white;
+}
+/* The sections (Specific CSS) */
