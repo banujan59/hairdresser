@@ -42,6 +42,7 @@ body
 	position: fixed;
 	width: 100%;
 	top: 0%;
+	z-index: 9999;
 }
 
 .nav li a
@@ -51,6 +52,11 @@ body
 	-ms-transition: .5s;
 	-o-transition: .5s;
 	transition: .5s;
+}
+
+.navbar-brand
+{
+	color: white !important;
 }
 /* The nav bar */
 

@@ -34,13 +34,20 @@ function initNavGlobalVars()
 */
 function initMap() 
 {				
-	var mapProp = 
+	var hairDresserLocation = {lat: 45.509823, lng: -73.674527};
+	var map = new google.maps.Map(document.getElementById('googleMap'), 
 	{
-		center:new google.maps.LatLng(45.5017,-73.5673),
-		zoom:10,
-	};
+		zoom: 15,
+		center: hairDresserLocation
+	});
 	
-	map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+	// add marker to the map
+	var marker = new google.maps.Marker
+	({
+          position: hairDresserLocation,
+          map: map,
+          title: 'Hair dresser saloon'
+    });
 }
 
 /**
@@ -54,7 +61,11 @@ function navSlider()
 	// BUG FIX #1: 
 	// Prevent the page from displaying the anchor when reload is pressed
 	//======================================================================
-		setTimeout(function(){$("body").scrollTop(0);},20);
+		//setTimeout(function(){$("body").scrollTop(0);},20);
+		$("body").load(function()
+		{
+			$("body").scrollTop(0);
+		});
 	// END BUG FIX #1
 	
 	// Feature #1
