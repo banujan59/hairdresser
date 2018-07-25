@@ -1,22 +1,58 @@
 <!DOCTYPE html> 
+
+<!-- -------------------------------------------------------------------------------------------
+	
+	Title: Hairdresser web site prototype
+	
+	Author: Banujan Atputharajah
+	
+	Description: 	This is a prototype website I (Banujan Atputharajah) developed for a
+					hair saloon business. The business did not want a website anymore.
+					However, I decided to continue the development of this prototype to
+					show my capabilities as a web developer.
+	
+	Languages used:
+		- HTML 5, CSS 3, JavaScript
+		
+	Plugin used: 
+		- CSS: Bootstrap
+		- JavaScript: jQuery
+------------------------------------------------------------------------------------------- -->
+
 <html>
 	<head> 
 		<meta charset="utf-8">
 		<link href="libraries/css/bootstrap.min.css" rel="stylesheet"> 
 		<link href="css/styles.css" rel="stylesheet">
 		
+		<!-- The viewport (to be used with mobile devices (phones and tablets) -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	
 		<title>Home - Hairdresser</title>
+		<!-- Linked CSS files -->
 		<link rel="shortcut icon" type="image/x-icon" href="images/hairdresser_icon.png" />
 		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet"/>
+		
+		<!-- Linked JS files -->
+		<script src="libraries/js/jQuery.js"></script>
+		<script src="libraries/js/bootstrap.min.js"></script>
+		<script src="js/script.js"></script>
 	<head>
-
-	<script src="libraries/js/jQuery.js"></script>
-	<script src="libraries/js/bootstrap.min.js"></script>
-	<script src="js/script.js"></script>
 	
 	<body>
+		<!-- ---------------------------------------------------------------------------------------------------
+				NAV BAR
+				
+				Function:	
+					- 	To help navigtion through the different sections of the page
+					- 	To provide other useful links (Facebook, Twitter, contact information)
+				
+				Feature(s):
+					- 	Smooth transition when a link to a section is clicked (Keeps the address bar clean 
+						without the # reference)
+					-	Links light up when section is being scrolled 
+				
+		--------------------------------------------------------------------------------------------------- -->
 		<nav class="navbar navbar-inverse">
 			<div class="container-fluid">
 				<div class="navbar-header">
@@ -33,12 +69,13 @@
 						<li><a class="aboutUSLink" href="#aboutUs">About Us</a></li>
 						<li><a class="locationLink" href="#location">Location</a></li>
 						<li><a class="galleryLink" href="#gallery">Gallery</a></li>
+						
+						<!-- The drop down list -->
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+							<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">More <span class="caret"></span></a>
 							<ul class="dropdown-menu">
-								<li><a href="#">Action</a></li>
-								<li><a href="#">Another action</a></li>
-								<li><a href="#">Something else here</a></li>
+								<li><a href="#">Make an appointment</a></li>
+								<li><a href="#">Contact us</a></li>
 								<li role="separator" class="divider"></li>
 								<li><a href="#">Like us on Facebook</a></li>
 								<li><a href="#">Follow us on Twitter</a></li>
@@ -48,14 +85,20 @@
 				</div>
 			</div>
 		</nav>
-		
-		<!-- 
-			We should think about putting the business' logo right here....
-		-->
+		<!-- End nav bar -->
 		
 		
+		<!-- ---------------------------------------------------------------------------------------------------
+			SECTIONS
+			
+			Function:
+				-	Seperate each main components of the page into parts (sections)
+			
+			Feature:
+				- 	Each section has its own color background so it is easily distinguishable from one another
+		--------------------------------------------------------------------------------------------------- -->
 		<section id="brand">
-			<h1>Brand</h1>
+			<h1>The Brand</h1>
 		</section>
 		
 		<section id="aboutUs">
@@ -74,6 +117,7 @@
 		<section id="gallery">
 			<h1>Gallery</h1>
 		</section>
+		<!-- End sections -->
 		
 	</body>
 </html>

@@ -15,6 +15,12 @@ $(function() // to be executed when DOM finished loading
 	
 	// implement the nav slider
 	navSlider();
+	
+	/* ==========================================================
+		BUG FIX: Fix which nav link is white when page is loaded
+	========================================================== */
+	$(window).trigger("scroll");
+	/* END BUG FIX */
 });
 
 /**
@@ -35,7 +41,7 @@ function initNavGlobalVars()
 function initMap() 
 {				
 	var hairDresserLocation = {lat: 45.509823, lng: -73.674527};
-	var map = new google.maps.Map(document.getElementById('googleMap'), 
+	map = new google.maps.Map(document.getElementById('googleMap'), 
 	{
 		zoom: 15,
 		center: hairDresserLocation
@@ -56,18 +62,7 @@ function initMap()
 		2) Each link in the navigation bar will be change color according to the position of the nav bar
 */
 function navSlider()
-{
-	//======================================================================
-	// BUG FIX #1: 
-	// Prevent the page from displaying the anchor when reload is pressed
-	//======================================================================
-		//setTimeout(function(){$("body").scrollTop(0);},20);
-		$("body").load(function()
-		{
-			$("body").scrollTop(0);
-		});
-	// END BUG FIX #1
-	
+{	
 	// Feature #1
 	$(".nav li a").click(function(e)
 	{
@@ -116,9 +111,5 @@ function navSlider()
 			$(".galleryLink").css("color", "white");
 			$(".aboutUSLink, .locationLink, .brandLink").css("color", "#9d9d9d");
 		}
-		
-		// if we are at the top of the page
-		else
-			$(".aboutUSLink, .locationLink, .brandLink, .galleryLink").css("color", "#9d9d9d");
 	});
 }

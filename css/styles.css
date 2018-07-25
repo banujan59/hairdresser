@@ -61,10 +61,17 @@ body
 /* The nav bar */
 
 /* The sections (General CSS) */
+section
+{
+	position: absolute !important;
+	width: 100%;
+	height: 100%;
+}
+
 #brand
 {
-	margin-top: 10%;
-	background-color: rgb(68, 57, 57);
+	top: 0%;
+	background-color: rgba(0, 0, 0, 0);
 	padding: 5%;
 	padding-left:2%;
 	color: white;
@@ -72,7 +79,7 @@ body
 
 #aboutUs
 {
-	margin-top: 50%;
+	top: 100%;
 	background-color: rgb(68, 57, 57);
 	padding: 5%;
 	padding-left:2%;
@@ -81,7 +88,7 @@ body
 
 #location
 {
-	margin-top: 100%;
+	top: 200%;
 	background-color: #587498;
 	padding: 5%;
 	padding-left:2%;
@@ -90,8 +97,8 @@ body
 
 #gallery
 {
-	margin-top: 200%;
-	background-color: #FFD800;
+	top: 300%;
+	background-color: #99CC99;
 	padding: 5%;
 	padding-left:2%;
 	color: black;
