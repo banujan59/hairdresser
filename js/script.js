@@ -74,7 +74,7 @@ function navSlider()
 		{
 			var time = 1000; // time of the animation (in miliseconds)
 			var pos = Math.max(target.offset().top, 0); // the target position
-			$("body").animate({ scrollTop: pos }, time, 'swing');
+			$("html").animate({ scrollTop: pos }, 1000);
 		}
 	});
 	
@@ -82,7 +82,7 @@ function navSlider()
 	$(window).scroll(function()
 	{
 		// variable that holds the current y-scroll value
-		var scrollPos = $("body").scrollTop();
+		var scrollPos = $("html").scrollTop();
 		
 		// if were are between section brand and about us
 		if(scrollPos >= brandOffset && scrollPos < aboutUSOffset)
