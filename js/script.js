@@ -71,21 +71,15 @@ function navSlider()
 	// Feature #1
 	$(".nav li a").click(function(e)
 	{
-		// check with type of link is clicked...
+		e.preventDefault(); // stops the browser's default behavior
+		var anchorID = $(this).attr("href"); // get the ID of the anchor
+		var target = $(anchorID); // set the target of the div with the anchor ID
 		
-		// if link is not an outside link (so a section link)
-		if( !$(this).attr("class") == "outsideLink" )
+		if (anchorID.charAt(0) == '#' && anchorID.length > 1 && target.length > 0)
 		{
-			e.preventDefault(); // stops the browser's default behavior
-			var anchorID = $(this).attr("href"); // get the ID of the anchor
-			var target = $(anchorID); // set the target of the div with the anchor ID
-		
-			if (anchorID.charAt(0) == '#' && anchorID.length > 1 && target.length > 0)
-			{
-				var time = 1000; // time of the animation (in miliseconds)
-				var pos = Math.max(target.offset().top, 0); // the target position
-				$("body").animate({ scrollTop: pos }, time, 'swing');
-			}
+			var time = 1000; // time of the animation (in miliseconds)
+			var pos = Math.max(target.offset().top, 0); // the target position
+			$("body").animate({ scrollTop: pos }, time, 'swing');
 		}
 	});
 	
